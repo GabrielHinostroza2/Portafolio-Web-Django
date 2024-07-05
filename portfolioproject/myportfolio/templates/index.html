@@ -1,0 +1,251 @@
+{% load bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" integrity="sha512-DHNepbIus9t4e6YoMBSJLwl+nnm0tIwMBonsQQ+W9NKN6gVVVbomJs9Ii3mQ+HzGZiU5FyJLdnAz9a63ZgZvTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/estilo.css'%}">
+    
+    <title>Portafolio</title>
+    {% bootstrap_css %}
+</head>
+<body>
+    </section>
+    <span class="sombra">
+        <section id="inicio" class="inicio">
+            <div class="contenido">
+                <header>
+                    <div class="logo">
+                        <a href="#inicio">
+                            <img src="{% static 'images/beautiful-anime-landscape-cartoon-scene_23-2151035237.avif' %}"  alt="Logo" class="logo-img">
+                           
+                        </a>
+                        <h1>GH</h1>                        
+                    </div>
+                    
+                    <nav id="nav">
+                        
+                        <a href="{% url 'api' %}" class="botonrick">API R&M</a>
+                        <a href="#inicio">Inicio</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#habilidades">Habilidades</a>
+                        <a href="#trabajos">Trabajos</a>
+                        <a href="#contacto">Contacto</a>
+                    
+                    </nav>
+    
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+    
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/gabriel-hinostroza-42b18728a/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/GabrielHinostroza2"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </header>
+    
+                <div class="fila">
+                    <div class="col">
+                        <h2>MI PORTAFOLIO WEB</h2>
+                        <p>Esta pagina web, fue construida con HTML, JS, CSS y Boostrap 5. Además contendrá mi CV, información sobre mi, mis habilidades, mis proyectos y un área para contactarme.</p>
+                        <a href="https://drive.google.com/file/d/1Hfx_AFuJRAmbWEUKJAUw0HV0d4ik3XOW/view?usp=sharing" class="btn btn-1">Descargar CV</a>
+
+                    </div>
+                    <div class="col">
+                        <div class="contenedor-img">
+                            <img src="{% static 'images/foto-inicio.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </span>
+    
+    
+    <!-- sección SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="fila">
+            <div class="col">
+                <div class="card bg1">
+                    <div class="card">
+                        <div class="icono color1">
+                            <div class="circulo">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Sobre mi</h4>
+                    <p>Llevo 2 años estudiando Ingeniería Informática, pero desde pequeño me han apasionado las tecnologías.</p>
+                    <a href="https://drive.google.com/file/d/1Hfx_AFuJRAmbWEUKJAUw0HV0d4ik3XOW/view?usp=sharing">Leer Más</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg2">
+                    <div class="card">
+                        <div class="icono color2">
+                            <div class="circulo">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Creatividad</h3>
+                    <h2>Soy una persona muy creativa cuando la ocasión y momento lo necesita, pero hay situaciones dónde me estanco.</h2>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg3">
+                    <div class="card">
+                        <div class="icono color3">
+                            <div class="circulo">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Otros</h3>
+                    <p>Me gusta jugar videojuegos, escuchar música, ver series o anime. Practico igual deportes como Voleibol y fútbol.</p>
+            </div>
+        </div>
+        
+    </section>
+    {% load static %}
+   <!-- sección habilidades -->
+<section class="habilidades" id="habilidades">
+    <div class="contenedor-habi">
+        <h2>Habilidades</h2>
+        <div class="fila">
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="65">
+                            <span>65%</span>
+                        </div>
+                        <h2>HTML & CSS</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="90">
+                            <span>90%</span>
+                        </div>
+                        <h2>ATENCIÓN AL CLIENTE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="65">
+                            <span>65%</span>
+                        </div>
+                        <h2>JAVASCRIPT</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="70">
+                            <span>70%</span>
+                        </div>
+                        <h2>SQL DEVELOPER</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="90">
+                            <span>90%</span>
+                        </div>
+                        <h2>LIDERAZGO</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="score">
+                    <div class="box">
+                        <div class="chart" data-percent="70">
+                            <span>70%</span>
+                        </div>
+                        <h2>JAVA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center">My Projects</h2>
+            <div class="row">
+                {% for proyecto in proyectos %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="{{ proyecto.titulo }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ proyecto.titulo }}</h5>
+                            <p class="card-text">{{ proyecto.descripcion }}</p>
+                            <a href="{{ proyecto.link_sitio }}" class="btn btn-primary" target="_blank">Web</a>
+                            <a href="{{ proyecto.link_repositorio }}" class="btn btn-secondary" target="_blank">Repositorio</a>
+                            <a href="{% url 'proyecto_detalle' proyecto.pk %}" class="btn btn-info">Ver Detalle</a> <!-- Nuevo botón -->
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+ <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Contáctame</h2>
+            <form method="POST" action="{% url 'contacto_nuevo' %}" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="id_nombre" name="nombre" required>
+                    <div class="invalid-feedback">Por favor ingresa un nombre.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="id_email" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="id_email" name="email" required>
+                    <div class="invalid-feedback">Por favor ingresa un correo.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="id_mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="id_mensaje" name="mensaje" rows="3" required></textarea>
+                    <div class="invalid-feedback">Por favor ingresa un mensaje.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+
+    <footer>
+        <p>Creado por Gabriel Hinostroza - 2024 - </p>
+    </footer>
+    {% bootstrap_javascript %}
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/apistyles.css' %}">
+  <title>API Rick and Morty</title>
+</head>
+<body>
+  <header></header>
+  <main>
+    <h1>API: Rick and Morty</h1>
+    <h3>Bienvenido a la API de Rick and Morty, podrás buscar tus personajes favoritos</h3>
+    <a href="{% url 'home' %}" class="btn btn-primary">Atrás</a>
+    <hr>
+    <input id="txt-character" class="finder-character" type="text" placeholder="Busca tu personaje por su nombre:">
+    <div id="containerCards" class="container-cards">
+    </div>
+  </main>
+  <footer>
+    <a href="{% url 'home' %}">Gabriel H.</a>
+  </footer>
+  <script src="{% static 'js/apiscript.js' %}"></script>
+</body>
+</html>
